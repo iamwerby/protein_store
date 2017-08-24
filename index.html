@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет Магазин Спортивного Питания</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<div id="wrapper">
+    <div class="row">
+        <div id="sidebar-wrapper" class="col-md-2">
+            <ul class="sidebar-nav" id="categoryselect">
+            </ul>
+        </div>
+        <div id="page-content-wrapper" class="col-md-10">
+
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="userCart">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Your Order</h4>
+                </div>
+                <div class="modal-body" id="userCartModalBody">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="userCartTable">
+
+                        </tbody>
+                    </table>
+
+                    <form class="form-horizontal" id="userForm">
+                        <div id="alertDiv">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="name">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" placeholder="Enter your Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="country">Country</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="country" name ="country"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="state">City/State</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name ="state" id ="state"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="address">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" required>
+                            </div>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6Lc29yQUAAAAAADb85FjneeGOwyg3rBp5hu-EYrh"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Buy</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type= "text/javascript" src="assets/js/countries.js"></script>
+    <script language="javascript">
+        populateCountries("country", "state");
+        populateCountries("country2");
+        populateCountries("country2");
+    </script>
+</body>
+</html>
